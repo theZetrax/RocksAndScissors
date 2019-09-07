@@ -14,13 +14,12 @@
     </Window.Resources>
 
     <Grid>
-        <WrapPanel Margin="300,0,300,37" Orientation="Vertical" VerticalAlignment="Bottom" HorizontalAlignment="Center">
-            <Button x:Name="NewGame_btn" Content="New Game" HorizontalAlignment="Center" Width="108" UseLayoutRounding="True" Height="29" d:LayoutOverrides="VerticalAlignment, LeftPosition, RightPosition"/>
+        <StackPanel Margin="300,0,300,37" Orientation="Vertical" VerticalAlignment="Bottom" HorizontalAlignment="Center">
+            <Button x:Name="NewGame_btn" Content="New Game" HorizontalAlignment="Center" Width="108" UseLayoutRounding="True" Height="29" Click="NewGame_btn_Click"/>
             <Button x:Name="HighScore_Btn" Content="High Score" HorizontalAlignment="Center" Width="108" Height="28" UseLayoutRounding="True"/>
             <Button x:Name="Exit_Btn" Content="Exit" HorizontalAlignment="Center" Width="108" Height="29" Click="exitbtn_Click" UseLayoutRounding="True"/>
-        </WrapPanel>
+        </StackPanel>
         <Label Content="© Zetrax.Inc" VerticalAlignment="Bottom" Margin="300,0" d:LayoutOverrides="Width" HorizontalAlignment="Center" FontSize="8"/>
         <Image x:Name="image" Height="213" Margin="293,10,288.6,0" VerticalAlignment="Top" HorizontalAlignment="Center" Source="{DynamicResource Logo}" Width="212"/>
-
     </Grid>
 </Window>

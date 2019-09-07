@@ -34,5 +34,12 @@ namespace RocksAndScissors
         {
             Application.Current.Shutdown();
         }
+
+        private void NewGame_btn_Click(object sender, RoutedEventArgs e)
+        {
+            GameWindow newGame = new GameWindow();
+            newGame.Show();
+            this.Close();
+        }
     }
 }
