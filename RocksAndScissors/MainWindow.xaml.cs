@@ -24,5 +24,15 @@ namespace RocksAndScissors
         {
             InitializeComponent();
         }
+
+        private void Welcome(object sender, RoutedEventArgs e)
+        {
+            
+        }
+
+        private void exitbtn_Click(object sender, RoutedEventArgs e)
+        {
+            Application.Current.Shutdown();
+        }
     }
 }
