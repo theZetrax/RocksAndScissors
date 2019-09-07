@@ -19,7 +19,21 @@
     <Grid>
 
         <WrapPanel Name="Fight" Margin="225,10,235.6,185.4" VerticalAlignment="Center" HorizontalAlignment="Center">
-            <Image x:Name="PlayerMove" Source="{DynamicResource ChooseImg}"/>
+            <Image x:Name="PlayerMove" Source="{DynamicResource ChooseImg}">
+                <Image.Triggers>
+                    <EventTrigger RoutedEvent="Image.Loaded">
+                        <BeginStoryboard>
+                            <Storyboard>
+                                <DoubleAnimation
+                                    Storyboard.TargetName="PlayerMove"
+                                    Storyboard.TargetProperty="Opacity"
+                                    From="1.0" To="0.0" Duration="0:0:2"
+                                    AutoReverse="True" RepeatBehavior="Forever" />
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </EventTrigger>
+                </Image.Triggers>
+            </Image>
         </WrapPanel>
 
         <StackPanel Margin="175,0,175,10.4" Height="170" VerticalAlignment="Bottom">
